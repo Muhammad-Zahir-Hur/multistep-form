@@ -1,0 +1,436 @@
+:root {
+	--U-Bold: "./assets/fonts/Ubuntu-Bold";
+	--U-Medium: "./assets/fonts/Ubuntu-Medium";
+	--U-Regular: "./assets/fonts/Ubuntu-Regular";
+	--Marine-blue: hsl(213, 96%, 18%);
+	--Purplish-blue: hsl(243, 100%, 62%);
+	--Pastel-blue: hsl(228, 100%, 84%);
+	--Light-blue: hsl(206, 94%, 87%);
+	--Strawberry-red: hsl(354, 84%, 57%);
+
+	/*nuetral colors*/
+	--Cool-gray: hsl(231, 11%, 63%);
+	--Light-gray: hsl(229, 24%, 87%);
+	--Magnolia: hsl(217, 100%, 97%);
+	--Alabaster: hsl(231, 100%, 99%);
+	--White: hsl(0, 0%, 100%);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.main-heading {
+	color: var(--Marine-blue);
+	margin: 0.6rem 0;
+	font-size: 0 0 1.6rem 0;
+	font-size: 1.6rem;
+}
+.main-para {
+	font-size: 1rem;
+}
+
+p {
+	color: var(--Cool-gray);
+}
+body {
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	background-color: var(--Light-blue);
+}
+
+.App {
+	height: 100%;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.main-bottom-container {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+}
+
+.main {
+	position: absolute;
+	top: 6rem;
+	width: 90%;
+	background-color: var(--White);
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 1rem 1rem;
+	border-radius: 2%;
+	overflow: auto;
+}
+
+.base-main {
+	margin-bottom: 1.4rem;
+}
+
+.info {
+	padding: 0.6rem 0;
+}
+
+.info-label,
+.plan,
+.addon-name {
+	color: var(--Marine-blue);
+	text-align: start;
+	font-size: 1rem;
+	font-weight: 700;
+	margin-bottom: 0.3rem;
+}
+.info-input {
+	margin-top: 0.5rem;
+	padding: 0.6rem;
+	width: 100%;
+	border-radius: 0.2rem;
+	border: var(--Light-gray) solid 2px;
+	outline-color: var(--Light-gray);
+	font-weight: bold;
+	color: var(--Marine-blue);
+}
+
+.empty-p {
+	color: var(--Strawberry-red);
+}
+.card {
+	padding: 0.5rem 0 00.5rem 0.5rem;
+	display: flex;
+	gap: 0.6rem;
+	border: 0.1rem solid var(--Light-gray);
+	border-radius: 0.4rem;
+	align-items: flex-start;
+}
+
+.selected-card {
+	border: var(--Purplish-blue) 0.1rem solid;
+	background-color: var(--Magnolia);
+}
+.card-img {
+	width: 2rem;
+}
+
+.free-months {
+	font-size: 0.8rem;
+	color: var(--Marine-blue);
+	font-weight: 700;
+}
+.card-p {
+	text-align: start;
+}
+
+.cards-container {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.addon-container {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+}
+.addon {
+	padding: 0.8rem 0.8rem;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	gap: 1rem;
+	border: 0.1rem solid var(--Light-gray);
+	border-radius: 0.5rem;
+}
+.addon-disc-div {
+	flex-grow: 1;
+}
+
+.addon-input {
+	height: 1.5rem;
+	width: 1.5rem;
+	color: var(--Purplish-blue);
+}
+
+.price {
+	color: var(--Purplish-blue);
+}
+
+.bottom-bar {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+	margin-top: auto;
+	background-color: var(--White);
+	padding: 1.2rem 0.5rem;
+	z-index: 10;
+}
+
+button {
+	outline: none;
+	padding: 0.6rem 1.2rem;
+	border-radius: 0.6rem;
+	font-size: 1.2rem;
+	background-color: var(--White);
+	border: none;
+	color: var(--Cool-gray);
+}
+
+.next {
+	background-color: var(--Marine-blue);
+	border-color: var(--White);
+	color: var(--White);
+}
+.nav-bar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	background-image: url("./assets/images/bg-sidebar-mobile.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 100%;
+	height: 11rem;
+}
+
+.nav-div {
+	position: relative;
+	bottom: 2rem;
+}
+.nav-div span {
+	position: absolute;
+	bottom: 50%;
+	right: 50%;
+	transform: translate(45%, 40%);
+	font-weight: 700;
+}
+
+.element {
+	height: 2.5rem;
+	width: 2.5rem;
+	border-radius: 50%;
+	border: var(--White) solid 1px;
+	font-weight: 700;
+	color: white;
+}
+
+.element span {
+	color: white;
+}
+
+#selected {
+	background-color: lightblue;
+	color: black;
+	font-weight: 700;
+	border: none;
+}
+
+.info-input,
+.addon-disc,
+.card-p,
+.empty-p {
+	font-size: 0.8rem;
+}
+
+.plan-type-toogle {
+	margin-top: 0.8rem;
+	display: flex;
+	background-color: var(--Magnolia);
+	justify-content: center;
+	padding: 0.6rem 0;
+	gap: 0.6rem;
+	width: 100%;
+}
+
+.toggle {
+	position: relative;
+	display: inline-block;
+	width: 3rem;
+	height: 1.5rem;
+	background-color: var(--Pastel-blue);
+	border-radius: 1rem;
+	border: 1px solid var(--Light-gray);
+	transition: all 0.5s;
+}
+
+/* After slide changes */
+.toggle:after {
+	content: "";
+	position: absolute;
+	width: 1.4rem;
+	height: 1.4rem;
+	border-radius: 50%;
+	background-color: var(--White);
+	transition: all 0.5s;
+}
+
+/* Toggle text */
+
+/* Checkbox checked effect */
+.checkbox:checked + .toggle::after {
+	left: 1.5rem;
+}
+
+/* Checkbox checked toggle label bg color */
+.checkbox:checked + .toggle {
+	background-color: var(--Purplish-blue);
+}
+
+/* Checkbox vanished */
+.checkbox {
+	display: none;
+}
+
+/* styling the DoubleCheck component  */
+
+.check-plan,
+.check-price {
+	color: var(--Marine-blue);
+	font-weight: bold;
+	padding: 0.1rem 0;
+}
+
+.plan-hr-cover {
+	padding: 0.6rem 0.4rem;
+	background-color: var(--Magnolia);
+	border-radius: 0.6rem;
+}
+
+.plan {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.check-change {
+	font-weight: normal;
+	text-decoration: underline;
+	padding: 0.3rem 0.4rem;
+}
+
+.total-price {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 0.4rem;
+}
+
+.plan-change-container {
+	padding: 0.6rem 0;
+}
+
+.addons-check {
+	justify-content: space-between;
+	padding: 0.6rem 0.6rem;
+	display: flex;
+}
+
+.addon-check-price {
+	color: var(--Marine-blue);
+}
+
+.check-total-value {
+	color: var(--Purplish-blue);
+	font-weight: bold;
+}
+
+.thanks-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.thanks-para {
+	font-size: 1.2rem;
+	text-align: center;
+	padding: 1.2rem;
+	line-height: 120%;
+}
+
+.larger-screens {
+	display: none;
+}
+
+.addons-check p {
+	color: var(--Marine-blue);
+}
+
+@media (min-width: 700px) {
+	body {
+		background-color: var(--White);
+	}
+
+	.App {
+		flex-direction: row;
+		gap: 0.8rem;
+	}
+	.cards-container {
+		flex-direction: row;
+		gap: 2rem;
+	}
+	.card {
+		padding: 1rem;
+
+		flex-direction: column;
+		gap: 1rem;
+
+		flex-basis: 100%;
+	}
+	.nav-bar {
+		width: 25%;
+		height: 95%;
+		position: relative;
+		flex-direction: column;
+		align-items: start;
+		background-image: url("./assets/images/bg-sidebar-desktop.svg");
+		background-size: cover;
+		margin: 0.8rem;
+		border-radius: 1rem;
+	}
+	.nav-div {
+		position: relative;
+		display: flex;
+		padding-left: 1rem;
+		gap: 1rem;
+	}
+	.nav-div span {
+		position: relative;
+		right: -15px;
+		top: 10px;
+		color: inherit;
+	}
+
+	.ls-text {
+		color: var(--White);
+		font-size: 1rem;
+		font-weight: 700;
+	}
+	.ls-step {
+		color: var(--Light-gray);
+		font-size: 0.8rem;
+	}
+
+	.main-bottom-container {
+		width: 60%;
+	}
+
+	.larger-screens {
+		display: inline-block;
+	}
+	.main {
+		position: initial;
+		height: 100%;
+		width: 100%;
+	}
+}
